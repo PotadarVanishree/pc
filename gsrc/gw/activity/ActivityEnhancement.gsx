@@ -22,7 +22,7 @@ enhancement ActivityEnhancement : Activity {
     return this.assignToRole(role)
   }
 
-  /* When assigning an activity based on a role on the assoicated Account, this function checkes that
+  /* When assigning an activity based on a role on the assoicated account, this function checkes that
    * the role has been assigned.  If not, it first attempts to assign the role.  If the activity cannot
    * be assigned (either because the role cannot be assigned to because the AssignToRole method returns
    * false) this function will also return false.  Otherwise, it will return true, indicating that the

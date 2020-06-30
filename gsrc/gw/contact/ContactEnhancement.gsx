@@ -337,7 +337,7 @@ enhancement ContactEnhancement : entity.Contact {
       // finders return in read-only bundles, so add to the local writeable bundle
       oldAcctContact = this.Bundle.add(oldAcctContact)
       
-      // if both contacts are on the same account, merge Account Contact Roles
+      // if both contacts are on the same account, merge account Contact Roles
       if (oldAcctContact.Account.AccountContacts.hasMatch(\ a -> a.Contact == this)) {
         var survivingAccountContact = oldAcctContact.Account.AccountContacts.firstWhere(\ a -> a.Contact == this)
         survivingAccountContact.merge(oldAcctContact)
@@ -412,7 +412,7 @@ enhancement ContactEnhancement : entity.Contact {
      *   FROM Contact c
      *   INNER JOIN AccountContact ac
      *     ON c.ID == ac.ContactID
-     *   INNER JOIN Account a
+     *   INNER JOIN account a
      *     ON a.ID == ac.AccountID
      *   WHERE a.LinkContacts == true
      *   AND c.ID = this.ID
@@ -440,7 +440,7 @@ enhancement ContactEnhancement : entity.Contact {
      *         AND EXISTS 
      *         (SELECT *
      *            FROM Policy p
-     *           WHERE p.Account = ac.Account
+     *           WHERE p.account = ac.account
      *             AND EXISTS
      *          (SELECT *
      *             FROM PolicyPeriod pp

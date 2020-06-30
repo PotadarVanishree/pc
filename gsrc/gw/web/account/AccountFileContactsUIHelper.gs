@@ -17,7 +17,7 @@ class AccountFileContactsUIHelper {
   }
 
   // this method is here because the AB Search page is read only, and simply selects a Contact to return - it does not perform the domain logic to do the add like the NewAccountContactPopup does
-  // additionally, this page is read-only itself, so we need to create up a new bundle, load the Account in it, call the domain logic and then commit the bundle
+  // additionally, this page is read-only itself, so we need to create up a new bundle, load the account in it, call the domain logic and then commit the bundle
   public static function addContactFromAddressBook(acctContactRolesDisplayNames : java.util.Map, account : entity.Account, abContact : Contact, roleType : typekey.AccountContactRole) {
     // if the Contact is brand new (freshly imported from AB), we can use it's bundle
     if (abContact.New) {

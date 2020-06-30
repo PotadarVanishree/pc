@@ -92,7 +92,7 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <!-- addAccount(Account) : String -->
+      <!-- addAccount(account) : String -->
       <xs:element name="addAccount">
         <xs:complexType>
           <xs:sequence>

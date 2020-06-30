@@ -7,7 +7,7 @@ uses gw.contact.ContactQueryBuilder
 uses gw.search.StringColumnRestrictor
 
 /**
- * Base query builder for Account and AccountSummary.
+ * Base query builder for account and AccountSummary.
  */
 @Export
 abstract class AccountQueryBuilderBase<T extends KeyableBean, B extends AccountQueryBuilderBase<T, B>> extends EntityQueryBuilder<T>{

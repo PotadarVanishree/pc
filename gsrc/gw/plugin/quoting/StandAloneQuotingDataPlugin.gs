@@ -9,7 +9,7 @@ class StandAloneQuotingDataPlugin implements QuotingDataPlugin {
 
   static var _idCounter = -1
   
-  // Just get any Account with Person in CA as the AccountContact and with producer codes.
+  // Just get any account with Person in CA as the AccountContact and with producer codes.
   override function getAccount(requestData : Object) : Account {
     var accountsWithAccountProducerCode = Query.make(Account).join(AccountProducerCode, "Account")
     var accounts = accountsWithAccountProducerCode.select().toList()

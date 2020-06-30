@@ -16,7 +16,7 @@ abstract class AbstractPolicyContactRoleCopier<T extends PolicyContactRole> exte
     /**
      * Retrieve and set the value from the AccountSyncable's Policy Value.  This copier action will occur 
      * as the result of Adding the same bean during OOS or some other process so we should not try to set 
-     * the enhancement properties directly because they might change Account Fields or have other unintended 
+     * the enhancement properties directly because they might change account Fields or have other unintended
      * side effects
      */  
     var firstName = PersonToPolicyContactRoleSyncedField.FirstName.getPolicyEntityFieldValue(role)

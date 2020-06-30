@@ -172,7 +172,7 @@ public class SamplePersonalDataDestructionPlugin extends PCPersonalDataDestructi
   }
 
   /**
-   * MAY: Account status is Withdrawn and all policies, if any, are MAY_DESTROY or MUST_DESTROY
+   * MAY: account status is Withdrawn and all policies, if any, are MAY_DESTROY or MUST_DESTROY
    * MUST: last activity was 3-years ago
    *
    * @param account the account whose disposition is to be determined

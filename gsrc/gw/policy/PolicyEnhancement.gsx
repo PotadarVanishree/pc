@@ -90,7 +90,7 @@ enhancement PolicyEnhancement : Policy {
   }
 
   /**
-   * If this policy has been divided (e.g. split or spun) into an new Account, find all the policies divided from it, otherwise return null.
+   * If this policy has been divided (e.g. split or spun) into an new account, find all the policies divided from it, otherwise return null.
    */
   property get DividedPolicies() : Policy[] {
     return this.DividedPoliciesQryResult.toTypedArray()

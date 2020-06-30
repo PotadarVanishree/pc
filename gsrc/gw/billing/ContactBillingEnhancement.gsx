@@ -25,7 +25,7 @@ enhancement ContactBillingEnhancement : entity.Contact {
     // to retry all associated account's message queue
     var messageQuery = Query.make(Message)
     // don't need to compare account because the error description should limit the result
-    // messageQuery.compareIn("Account", this.AccountContacts*.Account)
+    // messageQuery.compareIn("account", this.AccountContacts*.account)
     messageQuery.compare("DestinationID", Equals, BillingMessageTransport.DEST_ID)
     messageQuery.compare("Status", Equals, MessageStatus.RETRYABLE_ERROR)
     messageQuery.compare("ErrorCategory", Equals, ErrorCategory.TC_CONTACT_UNSYNCED)

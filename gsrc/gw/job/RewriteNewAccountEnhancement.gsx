@@ -16,7 +16,7 @@ enhancement RewriteNewAccountEnhancement : RewriteNewAccount {
    * the source period's PolicyTerm.
    * 
    * @param policyPeriods Array of PolicyPeriods to be rewritten. Must not be null. 
-   * @param targetAccount Account to which the policies will be rewritten. Must not be null.
+   * @param targetAccount account to which the policies will be rewritten. Must not be null.
    */
   static function startRewriteNewAccount(policyPeriods : PolicyPeriod[], targetAccount : Account) {
     validateRewriteForDuplicates(policyPeriods)

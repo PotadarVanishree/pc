@@ -36,8 +36,8 @@ class AccountWithdrawWorkQueue extends WorkQueueBase<Account, StandardWorkItem> 
     /**
      * Closes them (status ==> Withdrawn) if
      * There are no policies associated with the account
-     * The Account.CreateTime or Account.OriginationDate is older than a configurable number of months in the past (config.xml, set to 37 months)
-     * There are no open Activities associated with the Account
+     * The account.CreateTime or account.OriginationDate is older than a configurable number of months in the past (config.xml, set to 37 months)
+     * There are no open Activities associated with the account
      */
     // Find accounts that don't have any associated policies
     var queryPolicy = Query.make(Policy)

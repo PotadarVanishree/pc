@@ -16,7 +16,7 @@ uses java.util.Collection
  * Performs the purging of the linked address and its addresses (if any) given the following conditions:
  * <ol>
  * <li> The linked address contains no addresses </li>
- * <li> No address has FK to Account (ie AccountLocation) </li>
+ * <li> No address has FK to account (ie AccountLocation) </li>
  * <li> No address has FK to any other Address (AddressReplacement array) </li>
  * <li> Is not "in use" (by anything other than the LinkedAddress) </li>
  * </ol>

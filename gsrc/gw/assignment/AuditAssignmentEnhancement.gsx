@@ -5,7 +5,7 @@ enhancement AuditAssignmentEnhancement : Audit
 {
   /**
    * Assign the auditor to the job if the auditor was not already assigned.  
-   * Assign the Auditor from the Account first, and if not found, use System user.
+   * Assign the Auditor from the account first, and if not found, use System user.
    */
   function assignAuditor() {
     // No-op if the auditor was already assigned

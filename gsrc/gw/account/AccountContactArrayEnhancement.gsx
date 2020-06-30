@@ -22,7 +22,7 @@ enhancement AccountContactArrayEnhancement : AccountContact[] {
         var acct = acs[0].Account
 
         if ( acs.allMatch(\ ac -> ac.Account == acct) ) {
-          /* optimize to Account to remove necessity to probe using IN ... */
+          /* optimize to account to remove necessity to probe using IN ... */
           qry.compare("Account", Equals, acct)
           if ( acs.allMatch(\ ac -> ac.Active) ) {
             qry.compare("Active", Equals, true)

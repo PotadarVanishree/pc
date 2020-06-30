@@ -36,7 +36,7 @@ class PALineDriversValidator extends PolicyLineValidation<entity.PersonalAutoLin
    *   <li>License number unique</li>
    *   <li>License state and garage state match</li>
    *   <li>Address contains required fields</li>
-   *   <li>Account driver number of incidents</li>
+   *   <li>account driver number of incidents</li>
    *   <li>Verify and order MVRs</li>
    *   <li>Verify birth date and incidents</li>
    * </ul>

@@ -32,12 +32,12 @@ enhancement AccountBaseEnhancement : Account {
 
   /**
    * Return a query result for all distinct AccountContactRole subtypes
-   *    associated with this Account.
+   *    associated with this account.
    */
   property get AccountContactRoleSubtypes() : IQueryResult<AccountContactRole, typekey.AccountContactRole> {
     /* the AccountContact roles are contained in the AccountContact's for an
-     * Account; this query performs a reverse look-up through that relation
-     * using a subselect restricted to the AccountContact's for the Account...
+     * account; this query performs a reverse look-up through that relation
+     * using a subselect restricted to the AccountContact's for the account...
      */
     var roleQuery = Query.make(AccountContactRole)
     roleQuery.subselect("AccountContact", CompareIn, AccountContact, "ID")
@@ -134,8 +134,8 @@ enhancement AccountBaseEnhancement : Account {
      *   from Policy p
      *   Join PolicyPeriod pp
      *     on pp.Policy = p.policy
-     *   Join Account a
-     *     on p.Account = a
+     *   Join account a
+     *     on p.account = a
      */
     var filter = new ViewablePolicyPeriodQueryFilter()
     var resultPolicies = new ArrayList<Policy>()
@@ -148,7 +148,7 @@ enhancement AccountBaseEnhancement : Account {
   }
 
   /**
-   * Create and return a new Account with a brand new contact of the given type as the AccountHolder
+   * Create and return a new account with a brand new contact of the given type as the AccountHolder
    *
    * @param bundle - the bundle in which the account should be created
    * @param type - the specific type of contact ("company" or "person") to create
@@ -169,7 +169,7 @@ enhancement AccountBaseEnhancement : Account {
   }
 
   /**
-   * Create a new Account with the given Contact as the AccountHolder
+   * Create a new account with the given Contact as the AccountHolder
    * @param contact - the contact for which the account is to be created
    * @return the new account
    */
@@ -265,7 +265,7 @@ enhancement AccountBaseEnhancement : Account {
    */
   function changeAccountHolderTo(contact : Contact) {
     if (this.AccountHolder.AccountContact.Contact != contact) {
-      // only possible when the Account is brand new
+      // only possible when the account is brand new
       if (this.AccountHolder != null) {
         this.createCustomHistoryEvent(CustomHistoryType.TC_ACCT_CHANGED, \ -> displaykey.Account.History.AccountHolderChanged, this.AccountHolderContact.DisplayName, contact.DisplayName)
         this.AccountHolder.remove()
@@ -394,7 +394,7 @@ enhancement AccountBaseEnhancement : Account {
   }
 
   /**
-   * Make the Account active.
+   * Make the account active.
    *
    * This sets the account status "Active" if its current status belongs to the
    * "CanActivate" typefilter.

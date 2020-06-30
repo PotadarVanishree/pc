@@ -37,7 +37,7 @@ class ActivityDetailScreenUIHelper {
 
   public static function createSearchCriteria(symbolTable : Map<String, Object>) : NoteTemplateSearchCriteria {
     var rtn = new NoteTemplateSearchCriteria()
-    // rtn.Language = Account.AccountHolder.Language
+    // rtn.Language = account.AccountHolder.Language
     rtn.AvailableSymbols = symbolTable.Keys.join( "," )
     if ((symbolTable.get("policy") as Policy).Product != null) {
       rtn.LOB = (symbolTable.get("policy") as Policy).Product.Code

@@ -23,7 +23,7 @@ enhancement PolicyLineBaseEnhancement : PolicyLine {
   }
 
   /**
-   * All the existing Active additional insureds on the Account
+   * All the existing Active additional insureds on the account
    * Includes all of them as multiple detail rows are allowed, so it is perfectly valid to include Contacts that are
    * already AdditionalInsureds on this PolicyLine
    */
@@ -64,7 +64,7 @@ enhancement PolicyLineBaseEnhancement : PolicyLine {
    * Add the supplied <code>acctContact</code> as a PolicyAddlInsured.  This method
    * has the side-effect if adding an AdditionalInsured role to the acctContact if it
    * doesn't already have one; or of adding the AccountContact if one does not exist
-   * for the Contact on this Account already.
+   * for the Contact on this account already.
    */
   function addNewAdditionalInsured(contact : Contact) : PolicyAddlInsured {
     if (this.AdditionalInsureds.firstWhere( \ p -> p.AccountContactRole.AccountContact.Contact == contact ) != null) {

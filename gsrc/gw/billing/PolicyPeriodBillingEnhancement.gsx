@@ -174,7 +174,7 @@ enhancement PolicyPeriodBillingEnhancement : entity.PolicyPeriod {
   }
 
   /**
-   * The unapplied funds for the Billing Account
+   * The unapplied funds for the Billing account
    */
   property get UnappliedFunds() : BillingUnappliedFundInfo[] {
     return callBillingSystemPlugin(\ plugin ->

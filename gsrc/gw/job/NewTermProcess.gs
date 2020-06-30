@@ -78,7 +78,7 @@ abstract class NewTermProcess extends JobProcess {
       _branch.BillingMethod = null
     }
 
-    // Only ListBill requires that we not set the Alt Billing Account from previous term,
+    // Only ListBill requires that we not set the Alt Billing account from previous term,
     // as ListBill accounts are not currency-splintered (they are currency-specific)
     var notUsingListBill = _branch.BillingMethod != BillingMethod.TC_LISTBILL
     if (preferredSettlementCurrencyUnchanged or notUsingListBill) {

@@ -6,10 +6,10 @@ uses gw.pl.persistence.core.Bundle
 uses java.util.Date
 
 /**
- * Contains the fields used to create a new Account object.
+ * Contains the fields used to create a new account object.
  * An AccountPopulator pulls its fields from an AccountSearchCriteria.
  * It's the mechanism we use to formally control which fields are copied
- * from a new account *search* to an actual new Account.
+ * from a new account *search* to an actual new account.
  */
 @Export
 class AccountPopulator {

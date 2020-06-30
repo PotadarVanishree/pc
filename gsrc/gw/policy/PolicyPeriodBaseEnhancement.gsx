@@ -119,7 +119,7 @@ enhancement PolicyPeriodBaseEnhancement : PolicyPeriod {
   /**
    * Returns the string status of the period as of the current date in effective time.
    * This is useful for looking at the "bound view" of Policies, i.e. in the
-   * Policy File, Account File, etc.
+   * Policy File, account File, etc.
    */
   property get PeriodDisplayStatus() : String {
     return PolicyPeriod.getPeriodDisplayStatus(DateUtil.currentDate(), this.Status, this.CancellationDate, this.PeriodStart, this.PeriodEnd)
@@ -519,7 +519,7 @@ enhancement PolicyPeriodBaseEnhancement : PolicyPeriod {
   }
 
   /**
-   * A PolicyPeriod is reserved if its Account already has an Issued, non-canceled
+   * A PolicyPeriod is reserved if its account already has an Issued, non-canceled
    * PolicyPeriod for that Product which is effective today but is associated with
    * a different ProducerCode.
    */
@@ -803,7 +803,7 @@ enhancement PolicyPeriodBaseEnhancement : PolicyPeriod {
   }
 
   /**
-  * Binds autonumber sequences. Account LocationAutoNumberSeq should not be bound.
+  * Binds autonumber sequences. account LocationAutoNumberSeq should not be bound.
   */
   function cloneAutoNumberSequences() {
     cloneLocationAutoNumberSeq()
@@ -813,7 +813,7 @@ enhancement PolicyPeriodBaseEnhancement : PolicyPeriod {
   }
 
   /**
-  * Resets autonumber sequences. Account LocationAutoNumberSeq should not be reset.
+  * Resets autonumber sequences. account LocationAutoNumberSeq should not be reset.
   */
   function resetAutoNumberSequences() {
     resetLocationAutoNumberSeq()
@@ -823,7 +823,7 @@ enhancement PolicyPeriodBaseEnhancement : PolicyPeriod {
   }
 
   /**
-  * Binds autonumber sequences. Account LocationAutoNumberSeq
+  * Binds autonumber sequences. account LocationAutoNumberSeq
    not be bound.
   */
   function bindAutoNumberSequences() {
@@ -1044,7 +1044,7 @@ enhancement PolicyPeriodBaseEnhancement : PolicyPeriod {
 
   /**
    * Add a new PolicyAddlNamedInsured to this period, linked to the NamedInsured role on the acctContact.
-   * This method has a side-effect of creating the Account Contact and NamedInsured on the account if they don't
+   * This method has a side-effect of creating the account Contact and NamedInsured on the account if they don't
    * already exist.  These entities are all created in this period's bundle.
    * @param contact The Contact that the PolicyAddlNamedInsured ultimately refers to
    * @return The newly created PolicyAddlNamedInsured
@@ -1101,7 +1101,7 @@ enhancement PolicyPeriodBaseEnhancement : PolicyPeriod {
   /**
    * Set the <code>contact</code> as the billing contact on this period if it isn't already.
    * This has the side-effect of<ul>
-   * <li>creating the acctContact for the given Contact on this Period's Account if there is not one already
+   * <li>creating the acctContact for the given Contact on this Period's account if there is not one already
    * <li>making the acctContact a BillingContact if it isn't already one
    * <li>making the acctContact a PolicyBillingContact if it isn't already one
    * <li>removing the PolicyBillingContact role from the previous billing contact
@@ -1212,7 +1212,7 @@ enhancement PolicyPeriodBaseEnhancement : PolicyPeriod {
   }
 
   /**
-   * This method returns a map of AccountContacts to a list of Roles that Account Contact plays
+   * This method returns a map of AccountContacts to a list of Roles that account Contact plays
    * on the policy period.  This is useful for generating the full list of Policy Contact Roles
    * on a PolicyPeriod grouped by the AccountContact.
    */

@@ -28,7 +28,7 @@ class QuotingProcessor {
     _plugin = Plugins.get(QuotingDataPlugin)
   }
   
-  // Get an Account entity
+  // Get an account entity
   protected function getAccount(policyPeriodData : gw.webservice.pc.pc800.gxmodel.quotingpolicyperiodmodel.PolicyPeriod)
       : Account {
     var startFrame = Profiler.push(PCProfilerTag.DIST_QUOTE_GET_ACCOUNT);
@@ -43,7 +43,7 @@ class QuotingProcessor {
     return account
   }
 
-  // Get a ProducerCode for the specified Account.  
+  // Get a ProducerCode for the specified account.
   protected function getProducerCode(account : Account) : ProducerCode {
     var query = Query.make(ProducerCode)
     var producerCodesWithSpecifiedAccount = query.join(AccountProducerCode, "ProducerCode")

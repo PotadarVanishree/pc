@@ -15,8 +15,8 @@ enhancement AccountContactEnhancement : entity.AccountContact {
   }
 
   /**
-   * Returns the AccountContactRoles for this Account as a sorted comma-separated list of the Display Names.
-   * @return a sorted comma-separated list of the Display Names of the AccountContactRoles for this Account.
+   * Returns the AccountContactRoles for this account as a sorted comma-separated list of the Display Names.
+   * @return a sorted comma-separated list of the Display Names of the AccountContactRoles for this account.
    */
   function getRolesDisplayName() : String {
     return getRolesDisplayName(this.Roles.map(\ role -> role.DisplayName).toList())
@@ -97,7 +97,7 @@ enhancement AccountContactEnhancement : entity.AccountContact {
   /**
    * It add the new Roles to this account contact only if the new role does not exist
    * in the account contact.
-   * @param newRoles an array of AccountContactRoles to be added to the Account
+   * @param newRoles an array of AccountContactRoles to be added to the account
    */
   function addRoles(newRoles : AccountContactRole[]) {
     newRoles.each(\ newRole -> {
@@ -111,7 +111,7 @@ enhancement AccountContactEnhancement : entity.AccountContact {
    * Creates a new activity on the account associated to this account contact.
    * It also set the AccountContact foreignkey for the activity.
    * @param activityPattern the ActivityPattern to be used for the creation of the new Activity.
-   * @return a new Activity on the Account.
+   * @return a new Activity on the account.
    */
   function newActivity(activityPattern : ActivityPattern) : Activity {
     var activity = this.Account.newActivity(activityPattern)

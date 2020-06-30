@@ -43,8 +43,8 @@ class ActivitySearchCriteria extends EntitySearchCriteria<Activity> {
       // join chain: Activity -> Job <- PolicyPeriod)
       var policyPeriodTable =  query.join("Job").join(PolicyPeriod, "Job")
       policyPeriodTable.compare("PolicyNumber", Equals, PolicyNumber)
-      // then join with Policy then Account table
-      // join chain: PolicyPeriod -> Policy -> Account)
+      // then join with Policy then account table
+      // join chain: PolicyPeriod -> Policy -> account)
       policyPeriodTable.join("Policy").join("Account").compare("AccountNumber", Equals, AccountNumber)
     } else if (PolicyNumber != null) {
       // if user only specified policy number but not account number
@@ -56,7 +56,7 @@ class ActivitySearchCriteria extends EntitySearchCriteria<Activity> {
       query.subselect("Policy", InOperation.CompareIn, policyQuery, "ID")
     } else if (AccountNumber != null) {
       // if user only specified account number but not policy number
-      // join Activity with Account on AccountID
+      // join Activity with account on AccountID
       query.join("Account").compare("AccountNumber", Equals, AccountNumber)
     }
     return query

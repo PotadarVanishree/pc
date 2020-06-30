@@ -103,7 +103,7 @@ class ContactAssociationFinder {
 
   /**
    * Returns a List of BillingAccount instances, each one representing an account in the
-   * billing system whose corresponding PolicyCenter Account is linked to the specified
+   * billing system whose corresponding PolicyCenter account is linked to the specified
    * Contact.
    *
    * It works by first creating BillingAccounts for all of the local Accounts

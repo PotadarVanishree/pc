@@ -45,7 +45,7 @@ class PolicyDriverCopier extends Copier<PersonalAutoLine> {
     targetPolicyDriver.ApplicableGoodDriverDiscount = Source.ApplicableGoodDriverDiscount
     targetPolicyDriver.Excluded = Source.Excluded
     
-    //Copy Account Driver Fields
+    //Copy account Driver Fields
     //  Excludes: GoodDriverDiscount, DateCompletedTrainingClass, Student, TrainingClassType, 
     //            NumberofAccidents, NumberofViolations
     var targetAcctDriver = targetPolicyDriver.AccountContactRole as Driver

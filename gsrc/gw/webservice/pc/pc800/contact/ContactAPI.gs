@@ -116,7 +116,7 @@ class ContactAPI implements ABClientAPI {
         throw new BadIdentifierException(displaykey.Webservice.Error.CannotDeactivateAccountHolder)
       }
 
-      // for each Account contact, update the active status
+      // for each account contact, update the active status
       for (acctContact in accountContacts) {
         // finders are in a read-only bundle, so load it into our bundle
         var localAcctContact = bundle.add(acctContact)
@@ -324,7 +324,7 @@ class ContactAPI implements ABClientAPI {
    * Get accounts associated with the <code>Contact</code> with the given addressBookUID.
    *
    * @param addressBookUID the <code>AddressBookUID</code> of the <code>Contact</code>
-   * @return array of <code>Accounts</code> objects representing all <code>Account</code>s associated with the <code>Contact</code>
+   * @return array of <code>Accounts</code> objects representing all <code>account</code>s associated with the <code>Contact</code>
    */
   @Throws(SOAPException, "If communication errors occur")
   @Throws(RequiredFieldException, "If required field is missing")
@@ -353,7 +353,7 @@ class ContactAPI implements ABClientAPI {
    * Get accounts associated with the <code>Contact</code> with the given publicId.
    *
    * @param publicId the <code>publicId</code> of the <code>Contact</code>
-   * @return array of <code>ContactAccountInfo</code> objects representing all <code>Account</code>s associated with the <code>Contact</code>
+   * @return array of <code>ContactAccountInfo</code> objects representing all <code>account</code>s associated with the <code>Contact</code>
    */
   @Throws(SOAPException, "If communication errors occur")
   @Throws(RequiredFieldException, "If required field is missing")
@@ -582,7 +582,7 @@ class ContactAPI implements ABClientAPI {
    *   <li>If the deletedContact was an AccountHolder on an account, the keptContact will be made Active and given
    * the AccountHolder role on that account.</li>
    *   <li>AccountContacts referencing the deletedContact are changed to reference the keptContact; if both exist
-   * on the same Account the keptContact's AccountContact is used</li>
+   * on the same account the keptContact's AccountContact is used</li>
    *   <li>AccountContactRoles on a merged AccountContact are moved to the keptContact's AccountContact; again in
    * the case of duplicate Roles the keptContact's roles are preserved</li>
    *   <li>PolicyContactRoles referencing a merged AccountContactRole are changed to reference the kept's
@@ -655,7 +655,7 @@ class ContactAPI implements ABClientAPI {
    *   <li>If the deletedContact was an AccountHolder on an account, the keptContact will be made Active and given
    * the AccountHolder role on that account.</li>
    *   <li>AccountContacts referencing the deletedContact are changed to reference the keptContact; if both exist
-   * on the same Account the keptContact's AccountContact is used</li>
+   * on the same account the keptContact's AccountContact is used</li>
    *   <li>AccountContactRoles on a merged AccountContact are moved to the keptContact's AccountContact; again in
    * the case of duplicate Roles the keptContact's roles are preserved</li>
    *   <li>PolicyContactRoles referencing a merged AccountContactRole are changed to reference the kept's

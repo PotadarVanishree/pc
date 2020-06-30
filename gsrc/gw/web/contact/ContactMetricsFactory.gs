@@ -12,7 +12,7 @@ class ContactMetricsFactory {
 
   /**
    * Return the Contact Policy Metrics for the specified Contact
-   *    with the specified Account Contact Roles.
+   *    with the specified account Contact Roles.
    */
   function getContactMetrics(contact : Contact, roles : Set<Type<AccountContactRole>>) : ContactMetrics {
     var contactMetrics = new ContactMetricsImpl(contact, roles)

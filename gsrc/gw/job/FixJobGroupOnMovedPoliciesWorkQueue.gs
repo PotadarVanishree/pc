@@ -24,7 +24,7 @@ class FixJobGroupOnMovedPoliciesWorkQueue extends PCBulkInsertWorkQueueBase<Job>
    * INNER JOIN (pc_jobgroup jobgroup) ON jobgroup.ID=job.JobGroup
    * AND job.Subtype IN (?,?)
    * AND policy.MovedPolicySourceAccountID IS NOT NULL
-   * AND policy.AccountID <> jobgroup.Account
+   * AND policy.AccountID <> jobgroup.account
   */
   override function findTargets(job : IQueryBuilder) : Iterator {
     job.compareIn(Job#Subtype, JobsWithJobGroups)

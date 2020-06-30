@@ -176,7 +176,7 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <!-- getAssociatedAccounts(String) : Account[] -->
+      <!-- getAssociatedAccounts(String) : account[] -->
       <xs:element name="getAssociatedAccounts">
         <xs:complexType>
           <xs:sequence>
@@ -197,7 +197,7 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <!-- getAssociatedAccountsByPublicID(String) : Account[] -->
+      <!-- getAssociatedAccountsByPublicID(String) : account[] -->
       <xs:element name="getAssociatedAccountsByPublicID">
         <xs:complexType>
           <xs:sequence>
@@ -376,7 +376,7 @@
       <wsdl:fault name="SOAPException" message="tns:SOAPException"/>
       <!-- If any field is null -->
       <wsdl:fault name="RequiredFieldException" message="tns:RequiredFieldException"/>
-      <!-- If the Account or Contact cannot be found or If you try to deactivate an account holder -->
+      <!-- If the account or Contact cannot be found or If you try to deactivate an account holder -->
       <wsdl:fault name="BadIdentifierException" message="tns:BadIdentifierException"/>
       <wsdl:fault name="WsiAuthenticationException" message="tns:WsiAuthenticationException"/>
     </wsdl:operation>

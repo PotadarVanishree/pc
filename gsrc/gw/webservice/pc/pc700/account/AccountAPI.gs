@@ -223,7 +223,7 @@ class AccountAPI {
 
   /**
    * Finds the contact with the given display name on the given account and returns the public ID of the found
-   * contact, or null if no contact with the given name is on the Account
+   * contact, or null if no contact with the given name is on the account
    *
    * @param accountNumber the public ID of the account to find the contact on
    * @param contactDisplayName the full display name of the contact to look for
@@ -244,7 +244,7 @@ class AccountAPI {
   }
 
   /**
-   * Moves the following items from their "from" Account to this Account:
+   * Moves the following items from their "from" account to this account:
    * <ul>
    *   <li>Policies</li>
    *   <li>Activities</li>
@@ -294,8 +294,8 @@ class AccountAPI {
   /**
    * Moves all AccountContacts, AccountLocations, AccountProducerCode, Activities,
    * Documents, JobGroups, Notes, Policys and UserRoleAssignments from the
-   * "from" Account to the "to" Account, and deletes the "from" Account.
-   * The "to" Account becomes the "merged" Account.  Accomplishes this
+   * "from" account to the "to" account, and deletes the "from" account.
+   * The "to" account becomes the "merged" account.  Accomplishes this
    * in a separate transaction (actually multiple transactions).
    * <br>
    *
@@ -380,7 +380,7 @@ class AccountAPI {
   }
 
   /**
-   * Adds the given 'note' to the Account with the given public ID.
+   * Adds the given 'note' to the account with the given public ID.
    *
    * @param accountNumber the public ID of the account to add the note to
    * @param externalNote the note to add to the account
@@ -467,7 +467,7 @@ class AccountAPI {
       if (accountContactRoleType == typekey.AccountContactRole.TC_ACCOUNTHOLDER)
         throw new SOAPException(displaykey.AccountAPI.Error.Adding.AccountHolder.Not.Allowed)
 
-      // load Account
+      // load account
       var account = bundle.add(PCBeanFinder.loadBeanByPublicID<Account>(accountNumber, Account))
       if (account == null)
         throw new BadIdentifierException(displaykey.Webservice.Error.CannotFindAccount(accountNumber))

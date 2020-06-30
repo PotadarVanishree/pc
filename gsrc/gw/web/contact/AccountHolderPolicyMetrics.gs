@@ -346,7 +346,7 @@ class AccountHolderPolicyMetrics {
   }
 
   /**
-   * Takes a query on Policy, joins with the Account Table, and then restricts the query
+   * Takes a query on Policy, joins with the account Table, and then restricts the query
    * using restrictAccount.
    */
   private function restrictPolicies(contact : Contact, roles : Set<Type<AccountContactRole>>,
@@ -356,7 +356,7 @@ class AccountHolderPolicyMetrics {
   }
 
   /**
-   * Restrict a query builder on an Account to those with producer codes
+   * Restrict a query builder on an account to those with producer codes
    * the current user has security permission to access.
    */
   private function restrictAccountsByUserSecurity(accounts : ISelectQueryBuilder<Account>,
@@ -368,7 +368,7 @@ class AccountHolderPolicyMetrics {
   }
 
   /**
-   * Restrict a query builder on an Account to those associated with
+   * Restrict a query builder on an account to those associated with
    *    the specified contact by the specified role.
    */
   private function restrictAccounts(accounts : ISelectQueryBuilder<Account>,
@@ -377,7 +377,7 @@ class AccountHolderPolicyMetrics {
       /* use de-normalized AccountHolderContact... */
       accounts.compare("AccountHolderContact", Equals, contact)
     } else {
-      /* EXISTS on Account.AccountContacts correlated by Account for contact... */
+      /* EXISTS on account.AccountContacts correlated by account for contact... */
       var accountContact = accounts.subselect("ID", CompareIn, AccountContact, "Account")
       accountContact.compare("Contact", Equals, contact)
       /* EXISTS on AccountContact.Roles

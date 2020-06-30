@@ -15,7 +15,7 @@ uses gw.pl.persistence.core.Bundle
 class BaseCommand
 {
   var _location : Location as TopLocation
-  // User's parameters will be stored here, eg. Run Account withNumber 12345 will have the
+  // User's parameters will be stored here, eg. Run account withNumber 12345 will have the
   // Arguments = {1234}
   var _arguments : List<Argument> as Arguments
 

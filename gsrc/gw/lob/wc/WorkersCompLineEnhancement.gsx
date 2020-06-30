@@ -455,9 +455,9 @@ enhancement WorkersCompLineEnhancement : entity.WorkersCompLine {
   }
 
   /**
-   * adds an Owner Officer to the WC Line for the given Account Contact
-   * if the Account Contact does not have a role of "Owner Officer" already, the role is added to the Account Contact
-   * throws an exception if an Owner Officer for the given Account Contact already exists on this line
+   * adds an Owner Officer to the WC Line for the given account Contact
+   * if the account Contact does not have a role of "Owner Officer" already, the role is added to the account Contact
+   * throws an exception if an Owner Officer for the given account Contact already exists on this line
    */
   function addNewOwnerOfficerForContact(contact : Contact) : PolicyOwnerOfficer {
     if (this.PolicyOwnerOfficers.firstWhere(\ p -> p.AccountContactRole.AccountContact.Contact == contact) != null) {

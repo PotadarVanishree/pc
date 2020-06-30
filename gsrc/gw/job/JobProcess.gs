@@ -202,12 +202,15 @@ abstract class JobProcess implements gw.api.job.IJobProcess {
    * Checks the conditions for which the policy period can be switched
    * to edit mode ("Draft" status).
    */
-  function canEdit() : JobConditions {
+  function canEdit(): JobConditions {
     return startChecksFor(displaykey.Job.Process.Edit)
         .checkBranchNotLocked()
         .checkStatus(AllowedEditStatus)
         .checkEditPermission()
         .checkNoUnhandledPreemptions()
+  }
+
+  override function start() {
   }
 
   protected function canPromoteToDraft() : JobConditions {

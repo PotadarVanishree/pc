@@ -39,7 +39,7 @@ enhancement JobAssignmentEnhancement : Job
    * <ul>
    * <li>Preferrentially set the current user if they are a member of the default group</li>
    * <li>Look for the producer on the ProducerCode used to create this job</li>
-   * <li>If the producer was not found on the Producer Code, try the Account</li>
+   * <li>If the producer was not found on the Producer Code, try the account</li>
    * <li>Default to DefaultOwner</li>
    * </ul>
    */
@@ -70,7 +70,7 @@ enhancement JobAssignmentEnhancement : Job
         }
     }
     
-    // If the producer was not found on the Producer Code, try the Account
+    // If the producer was not found on the Producer Code, try the account
     var acctAssignment = this.Policy.Account.RoleAssignments.firstWhere( \ u -> u.AssignedUser.UserType == "Producer" )
     if (acctAssignment != null and
         AssignmentUtil.assignAndLogUserRole( this, acctAssignment.AssignedUser, acctAssignment.AssignedGroup, "producer", 

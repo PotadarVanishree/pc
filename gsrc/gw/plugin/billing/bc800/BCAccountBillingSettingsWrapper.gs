@@ -33,7 +33,7 @@ class BCAccountBillingSettingsWrapper implements BillingPaymentInfo {
   /**
    * Set the payment method
    *
-   * @param value The Account Payment Method type
+   * @param value The account Payment Method type
    */
   override property set PaymentMethod(value : AccountPaymentMethod) {
     _paymentMethod = value.Code

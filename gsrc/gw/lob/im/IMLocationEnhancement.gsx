@@ -16,7 +16,7 @@ enhancement IMLocationEnhancement : entity.IMLocation {
   }
 
   /**
-   * Checks whether or not an {@link entity.IMLocation} is referenced by any accounts receivable exposures in the Account Receivable Part
+   * Checks whether or not an {@link entity.IMLocation} is referenced by any accounts receivable exposures in the account Receivable Part
    * @return boolean - true if any account receivables is referenced by an {@link entity.IMLocation}
    */
   function isReferencedByAccountsReceivable() : boolean {
